@@ -1,20 +1,22 @@
 import { useEffect, useState } from "react";
 
+const BASE_URL = "https://mlops-backend-kcco.onrender.com";
+
 function App() {
   const [factory, setFactory] = useState(null);
   const [workers, setWorkers] = useState([]);
   const [stations, setStations] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/metrics/factory")
+    fetch(`${BASE_URL}/metrics/factory`)
       .then(res => res.json())
       .then(data => setFactory(data));
 
-    fetch("http://127.0.0.1:8000/metrics/workers")
+    fetch(`${BASE_URL}/metrics/workers`)
       .then(res => res.json())
       .then(data => setWorkers(data));
 
-    fetch("http://127.0.0.1:8000/metrics/workstations")
+    fetch(`${BASE_URL}/metrics/workstations`)
       .then(res => res.json())
       .then(data => setStations(data));
   }, []);
@@ -85,4 +87,3 @@ function App() {
 }
 
 export default App;
-
