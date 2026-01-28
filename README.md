@@ -115,6 +115,38 @@ GET /metrics/factory
 
 ---
 
+## 🗄️ Database Schema
+
+**events table**
+| Field | Description |
+|-----|------------|
+| timestamp | Event time |
+| entity_type | worker/workstation |
+| entity_id | W1, S1, etc |
+| event_type | working/idle |
+| duration_minutes | Activity duration |
+| units_produced | Output |
+| confidence | Data reliability |
+
+---
+
+## 📐 Metric Definitions
+
+- **Utilization (%)** = working / total time × 100
+- **Units/hour** = units / (minutes / 60)
+- **Throughput/hour** = station units / (occupied / 60)
+
+---
+
+## ⚖️ Assumptions & Tradeoffs
+
+- SQLite chosen for simplicity
+- Raw events stored for recomputation
+- No auth (out of scope)
+- Metrics computed dynamically
+
+---
+
 ## 📊 Dashboard Features
 
 ### Factory Summary
@@ -151,10 +183,14 @@ GET /metrics/factory
 - Backend: Railway / Render
 - Frontend: Vercel
 
-(Deployment links provided during submission)
+## 🌍 Deployment Links
+
+Frontend: https://mlops-productivity-dashboard.vercel.app/  
+Backend: https://mlops-backend-kcco.onrender.com/docs  
 
 ---
 
+---
 ---
 
 ## 🧠 MLOps & System Design Considerations
@@ -242,6 +278,7 @@ Aspiring Full-Stack MLOps Engineer
 - Clean API design
 - Metrics-driven architecture
 - Ready for production deployment
+- Deployed
 
 ---
 
