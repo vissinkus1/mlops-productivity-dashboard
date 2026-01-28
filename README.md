@@ -13,6 +13,17 @@ The project demonstrates **end-to-end system design**, covering:
 This project was built as part of a **Full-Stack MLOps Engineer Technical Assessment**.
 
 ---
+## 🔗 Project Links
+
+- **GitHub Repository:**  
+  https://github.com/vissinkus1/mlops-productivity-dashboard
+
+- **Live Frontend (Dashboard):**  
+  https://mlops-productivity-dashboard.vercel.app/
+
+- **Live Backend API (FastAPI Docs):**  
+  https://mlops-backend-kcco.onrender.com/docs
+
 
 ## 🏗️ System Architecture
 
